@@ -1,13 +1,11 @@
 {-# LANGUAGE DeriveGeneric #-}
-
 module Todo where
 
 import GHC.Generics (Generic)
 import Data.Aeson (FromJSON, ToJSON, encode, decode)
 import qualified Data.ByteString.Lazy as BL
 import qualified Data.Text as T
-import System.Directory (doesFileExist)
-import System.Directory (createDirectoryIfMissing)
+import System.Directory (doesFileExist ,createDirectoryIfMissing)
 import System.FilePath (takeDirectory)
 
 data Todo = Todo

@@ -7,8 +7,6 @@ import Todo
 main :: IO ()
 main = do
   args <- getArgs
-
-  saveTodos []
   
   case args of
     ("add":xs)    -> addTodo (T.pack $ unwords xs)
